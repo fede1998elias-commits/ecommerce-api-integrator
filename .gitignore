@@ -1,0 +1,42 @@
+# Credentials & secrets
+.env
+*.json
+!package.json
+*.yaml
+*.yml
+
+# Generated output
+*.pptx
+*.html
+
+# One-off and internal scripts
+debug_*.py
+audit_*.py
+make_*.py
+mediakit*.py
+hot_sale*.py
+retail_media*.py
+fetch_mediakit*.py
+stock_check*.py
+duramo_timeline*.py
+connectivity_test*.py
+CLAUDE*.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Claude Code internal
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db

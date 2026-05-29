@@ -1,0 +1,10 @@
+# Renombrá este archivo a google-ads.yaml y completá los valores.
+# Para obtener developer_token: Google Ads > Herramientas > Centro de API
+# Para client_id/client_secret/refresh_token: Google Cloud Console > OAuth 2.0
+
+developer_token: TU_DEVELOPER_TOKEN
+client_id: TU_CLIENT_ID.apps.googleusercontent.com
+client_secret: TU_CLIENT_SECRET
+refresh_token: TU_REFRESH_TOKEN
+login_customer_id: "TU_MCC_ID"    # MCC — sin guiones
+use_proto_plus: True
