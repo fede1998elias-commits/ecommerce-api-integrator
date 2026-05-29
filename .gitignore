@@ -20,7 +20,7 @@ fetch_mediakit*.py
 stock_check*.py
 duramo_timeline*.py
 connectivity_test*.py
-CLAUDE*.md
+INSTRUCTIONS*.md
 
 # Python
 __pycache__/
@@ -34,7 +34,7 @@ build/
 venv/
 env/
 
-# Claude Code internal
+# Internal
 .claude/
 
 # OS
