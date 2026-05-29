@@ -2,8 +2,11 @@ import os
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
-MERCHANT_ID = "146045311"
-SERVICE_ACCOUNT_FILE = os.path.join(os.path.dirname(__file__), "e-coomerce-484513-633cb3db894a.json")
+MERCHANT_ID = os.environ.get("MERCHANT_ID", "")
+SERVICE_ACCOUNT_FILE = os.environ.get(
+    "GOOGLE_SERVICE_ACCOUNT_FILE",
+    os.path.join(os.path.dirname(__file__), "service-account.json"),
+)
 _SCOPES = ["https://www.googleapis.com/auth/content"]
 
 

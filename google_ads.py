@@ -1,8 +1,8 @@
 import os
 from google.ads.googleads.client import GoogleAdsClient
 
-CUSTOMER_ID = "8583465819"   # cuenta directa (sin guiones)
-MCC_ID      = "5623250333"   # cuenta manager / login_customer_id
+CUSTOMER_ID = os.environ.get("GOOGLE_ADS_CUSTOMER_ID", "")
+MCC_ID      = os.environ.get("GOOGLE_ADS_MCC_ID", "")
 
 _YAML = os.path.join(os.path.dirname(__file__), "google-ads.yaml")
 

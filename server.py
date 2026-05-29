@@ -30,10 +30,13 @@ CORS(app)
 app.secret_key = os.environ.get("SECRET_KEY", "dev-pacogarcia-2024-secret")
 
 ADMIN_USER = "admin"
-ADMIN_PASS = "pacogarcia2024"
+ADMIN_PASS = os.environ.get("ADMIN_PASSWORD", "")
 
-SERVICE_ACCOUNT_FILE = os.path.join(os.path.dirname(__file__), "e-coomerce-484513-633cb3db894a.json")
-PROPERTY_ID = "251263727"
+SERVICE_ACCOUNT_FILE = os.environ.get(
+    "GOOGLE_SERVICE_ACCOUNT_FILE",
+    os.path.join(os.path.dirname(__file__), "service-account.json"),
+)
+PROPERTY_ID = os.environ.get("GA4_PROPERTY_ID", "")
 
 
 def login_required(f):

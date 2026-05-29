@@ -3,8 +3,11 @@ from datetime import datetime, timedelta
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
-SITE_URL = "sc-domain:pacogarcia.com.ar"
-SERVICE_ACCOUNT_FILE = os.path.join(os.path.dirname(__file__), "e-coomerce-484513-633cb3db894a.json")
+SITE_URL = os.environ.get("SEARCH_CONSOLE_SITE_URL", "")
+SERVICE_ACCOUNT_FILE = os.environ.get(
+    "GOOGLE_SERVICE_ACCOUNT_FILE",
+    os.path.join(os.path.dirname(__file__), "service-account.json"),
+)
 _SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
 
 
