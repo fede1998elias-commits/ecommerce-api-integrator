@@ -27,7 +27,7 @@ import meta_ads as meta
 
 app = Flask(__name__, static_folder="static")
 CORS(app)
-app.secret_key = os.environ.get("SECRET_KEY", "dev-pacogarcia-2024-secret")
+app.secret_key = os.environ.get("SECRET_KEY", "change-me-in-production")
 
 ADMIN_USER = "admin"
 ADMIN_PASS = os.environ.get("ADMIN_PASSWORD", "")
